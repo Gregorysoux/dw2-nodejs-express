@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gêneros</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <%- include('partials/navbar') %>
+
+  <div class="conteudo">
+    <h1>Gêneros</h1>
+
+    <table>
+      <tr>
+        <th>Gênero</th>
+        <th>Descrição</th>
+      </tr>
+      <% generos.forEach(function(g) { %>
+        <tr>
+          <td><%= g.nome %></td>
+          <td><%= g.descricao %></td>
+        </tr>
+      <% }); %>
+    </table>
+  </div>
+
+</body>
+</html>

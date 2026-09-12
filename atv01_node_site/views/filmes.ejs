@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Filmes</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <%- include('partials/navbar') %>
+
+  <div class="conteudo">
+    <h1>Filmes</h1>
+
+    <table>
+      <tr>
+        <th>Título</th>
+        <th>Ano</th>
+        <th>Classificação</th>
+      </tr>
+      <% filmes.forEach(function(f) { %>
+        <tr>
+          <td><%= f.titulo %></td>
+          <td><%= f.ano %></td>
+          <td><%= f.classificacao %></td>
+        </tr>
+      <% }); %>
+    </table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Atores</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <%- include('partials/navbar') %>
+
+  <div class="conteudo">
+    <h1>Atores</h1>
+
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Nacionalidade</th>
+        <th>Data de nascimento</th>
+      </tr>
+      <% atores.forEach(function(a) { %>
+        <tr>
+          <td><%= a.nome %></td>
+          <td><%= a.nacionalidade %></td>
+          <td><%= a.nascimento %></td>
+        </tr>
+      <% }); %>
+    </table>
+  </div>
+
+</body>
+</html>
